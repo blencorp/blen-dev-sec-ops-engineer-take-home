@@ -1,51 +1,46 @@
-# BLEN Engineering Take-Home Challenges
+# BLEN Engineering Take-Home Challenge
 
-Welcome to the BLEN Engineering Take-Home Challenges repository. This collection of challenges is designed to assess candidates' skills in various areas of software engineering, DevOps, and cloud technologies.
+Welcome to the BLEN Engineering Take-Home Challenge repository. This challenge is designed to assess candidates' skills in cloud infrastructure, networking, security, containerization, and DevOps practices.
 
-## Repository Contents
+## Challenge
 
-This repository contains the following take-home challenges:
+**DevSecOps Engineer: Secure Three-Tier Architecture on AWS**
+- [Challenge Instructions](aws-three-tier-architecture.md)
+- Focus: Networking design, infrastructure as code, containerization, database security, and CI/CD pipeline setup
 
-1. **DevSecOps Engineer: Containerized Architecture with RDS**
-   - File: [README.md](aws-devops-role.md)
-   - Focus: Infrastructure as code, containerization, security, and CI/CD pipeline setup using AWS services
+### What Candidates Will Build
 
-2. **DevOps Engineer: Serving a Static Site with CI/CD**
-   - File: [README.md](aws-static-website.md)
-   - Focus: Infrastructure as code, S3 static website hosting, CloudFront distribution, and CI/CD pipeline setup
-     
-3. **DevSecOps Engineer Assessment: Containerized Next.js Application with RDS**
-   - File: [README.md](./aws-devops-ecs/README.md)
-   - Focus: Infrastructure as code, containerization, security, and CI/CD pipeline setup using AWS services
+A production-style three-tier architecture on AWS:
 
-## Purpose
+1. **Networking Foundation** - VPC with public, private, and isolated subnets, IGW, NAT Gateways, and proper route tables
+2. **Data Tier** - RDS PostgreSQL in isolated subnets with no public access
+3. **Application Tier** - ECS Fargate running a containerized Next.js app in private subnets
+4. **Presentation Tier** - Application Load Balancer in public subnets
+5. **CI/CD Pipeline** - GitHub Actions for automated build and deployment
+6. **Security** - IAM least privilege, security groups, Secrets Manager, network isolation
 
-These challenges are designed to:
-- Assess candidates' practical skills in real-world scenarios
-- Evaluate problem-solving abilities and technical decision-making
-- Provide candidates with an opportunity to showcase their expertise
+## Provided Resources
+
+The `app/` directory contains a pre-built Next.js application with:
+- A Dockerfile for containerization
+- Database connectivity check (displays connection status on the home page)
+- No application code modifications required - candidates focus purely on infrastructure
 
 ## How to Use This Repository
 
-If you're a candidate:
-1. Read the challenge description thoroughly
-2. Follow the instructions provided in the challenge document
-3. Create your own GitHub repository for your solution
-4. Submit your solution as per the instructions in the challenge
+**Candidates:**
+1. Read the [challenge instructions](aws-three-tier-architecture.md) thoroughly
+2. Fork this repository
+3. Implement your solution
+4. Submit the link to your forked repository
 
-If you're a BLEN team member:
-- Use these challenges as a basis for evaluating candidates
-- Refer to the evaluation criteria in each challenge for assessment
+**BLEN Team Members:**
+- Use the evaluation criteria and weight table in the challenge document for assessment
+- Networking and security together account for 45% of the evaluation
 
 ## General Guidelines
 
-- Each challenge is self-contained and includes all necessary instructions
-- Candidates should focus on meeting the specified requirements
-- Code quality, documentation, and the ability to explain the solution are important
-- Time management is crucial; candidates should prioritize core requirements over optional features
-
-## Feedback and Updates
-
-We're constantly working to improve our assessment process. If you have any feedback or suggestions for these challenges, please contact the BLEN engineering team.
-
-Good luck to all candidates, and we look forward to reviewing your innovative solutions!
+- All infrastructure must be provisioned with Terraform
+- Code quality, documentation, and the ability to explain your solution are important
+- Prioritize security and proper network segmentation
+- Time management is crucial; focus on core requirements before bonus features
