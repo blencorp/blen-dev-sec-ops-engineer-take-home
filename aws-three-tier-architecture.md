@@ -87,6 +87,7 @@ Using Terraform, provision the database layer:
 ### RDS Instance
 - **Engine**: PostgreSQL
 - **Deployment**: Place in the **isolated subnets** using a DB subnet group
+- **High Availability**: Enable **Multi-AZ deployment** so the database has a primary and standby in different Availability Zones
 - **Public Access**: Disabled (`publicly_accessible = false`)
 - **Storage**: Use a reasonable instance size (e.g., `db.t3.micro` for this exercise)
 
