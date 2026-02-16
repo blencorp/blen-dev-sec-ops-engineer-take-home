@@ -133,12 +133,14 @@ Deploy the provided Next.js application using ECS Fargate.
 ### ALB Configuration
 - Deploy an **Application Load Balancer** in the **public subnets**
 - Create a **target group** pointing to the ECS service on port `3000`
-- Configure a **listener** on port `80` forwarding to the target group
+- Configure an **HTTPS listener** on port `443` using an ACM TLS certificate, forwarding to the target group
+- (Optional) Configure an HTTP listener on port `80` that redirects all requests to HTTPS (`443`)
 - Set up **health checks** against the application
 
 ### Security
 - Create a **security group** for the ALB:
-  - Allow inbound HTTP (port `80`) from `0.0.0.0/0`
+  - Allow inbound HTTPS (port `443`) from `0.0.0.0/0`
+  - (Optional) Allow inbound HTTP (port `80`) from `0.0.0.0/0` only for redirecting to HTTPS
   - Allow outbound traffic to the ECS security group on port `3000`
 
 ### Validation
