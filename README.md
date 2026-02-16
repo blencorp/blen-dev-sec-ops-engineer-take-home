@@ -29,10 +29,11 @@ The `app/` directory contains a pre-built Next.js application with:
 ## How to Use This Repository
 
 **Candidates:**
-1. Read the [challenge instructions](aws-three-tier-architecture.md) thoroughly
-2. Fork this repository
-3. Implement your solution
-4. Submit the link to your forked repository
+1. **Fork** this repository to your own GitHub account
+2. Read the [challenge instructions](aws-three-tier-architecture.md) thoroughly
+3. Implement your solution in your fork
+4. Update your fork's README with deployment instructions and architecture decisions
+5. Submit the link to your forked repository to your BLEN recruiting contact
 
 **BLEN Team Members:**
 - Use your internal evaluation rubric when assessing submissions
