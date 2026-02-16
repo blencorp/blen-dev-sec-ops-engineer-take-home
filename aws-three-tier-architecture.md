@@ -263,7 +263,7 @@ To help you focus on the core requirements:
    - Clear, step-by-step instructions on how to deploy your solution
    - Architecture decisions and trade-offs you made
    - Security considerations and how you addressed them
-3. Verify your repository follows the [expected project structure](#getting-started)
+3. Verify your repository follows the [expected project structure](#expected-project-structure)
 4. **Submit the link to your forked GitHub repository to your BLEN recruiting contact**
 
 > Your submission will be evaluated on: correct infrastructure implementation, Terraform quality and modularity, networking and security design, CI/CD completeness, and documentation clarity.
