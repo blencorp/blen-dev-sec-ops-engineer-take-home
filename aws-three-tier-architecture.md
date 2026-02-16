@@ -4,6 +4,23 @@
 
 This assessment evaluates your ability to design and deploy a **secure, scalable three-tier architecture** on AWS using Terraform. You will build the infrastructure from the ground up, starting with the networking foundation and progressing through the data, application, and presentation tiers. A pre-built Next.js application is provided so you can focus entirely on infrastructure and DevOps practices.
 
+## Getting Started
+
+1. **Fork** this repository to your own GitHub account
+2. **Read** this entire document before writing any code
+3. **Implement** your solution following the steps below
+4. **Document** your work in your fork's README (see [Submission Instructions](#submission-instructions))
+5. **Submit** the link to your forked repository to your BLEN recruiting contact
+
+### Expected Project Structure
+```
+/
+├── terraform/          # All Terraform configuration files
+├── app/                # Provided Next.js application (do not modify)
+├── .github/workflows/  # GitHub Actions CI/CD pipeline
+└── README.md           # Your documentation (deployment guide, architecture decisions, etc.)
+```
+
 ### Architecture Diagram
 
 ```
@@ -225,7 +242,6 @@ If time allows, consider implementing:
 - **AWS WAF** on the Application Load Balancer
 - **CloudWatch** alarms and dashboards for monitoring
 - **Container image scanning** in the CI/CD pipeline
-- **HTTPS** with ACM certificate on the ALB
 
 ---
 
@@ -242,13 +258,13 @@ To help you focus on the core requirements:
 
 ## Submission Instructions
 
-1. Fork this repository and implement your solution
-2. Ensure all infrastructure-as-code and CI/CD configurations are committed
-3. Update the README.md with:
-   - Clear instructions on how to deploy your solution
-   - Architecture decisions and trade-offs
-   - Security considerations
-4. Submit the link to your GitHub repository
+1. Ensure all infrastructure-as-code and CI/CD configurations are committed to your forked repository
+2. Update your fork's `README.md` with:
+   - Clear, step-by-step instructions on how to deploy your solution
+   - Architecture decisions and trade-offs you made
+   - Security considerations and how you addressed them
+3. Verify your repository follows the [expected project structure](#getting-started)
+4. **Submit the link to your forked GitHub repository to your BLEN recruiting contact**
 
----
+> Your submission will be evaluated on: correct infrastructure implementation, Terraform quality and modularity, networking and security design, CI/CD completeness, and documentation clarity.
 
