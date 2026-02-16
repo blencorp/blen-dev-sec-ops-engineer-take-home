@@ -122,7 +122,8 @@ Deploy the provided Next.js application using ECS Fargate.
 - Create a **security group** for ECS tasks:
   - Allow inbound traffic on port `3000` from the ALB security group only
   - Allow outbound traffic to the RDS security group on port `5432`
-  - Allow outbound HTTPS (port `443`) for pulling images and accessing Secrets Manager
+  - Allow outbound HTTPS (port `443`) to required AWS service endpoints (e.g., ECR, ECS, Secrets Manager, CloudWatch, STS), either via internet egress or VPC interface endpoints, for pulling images, accessing Secrets Manager, and ECS control-plane operations
+  - Ensure DNS resolution is possible (allow egress on port `53` to the VPC DNS resolver or configure appropriate VPC endpoints for DNS resolution)
 
 ---
 
