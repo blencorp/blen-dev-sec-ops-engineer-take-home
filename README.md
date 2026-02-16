@@ -35,8 +35,8 @@ The `app/` directory contains a pre-built Next.js application with:
 4. Submit the link to your forked repository
 
 **BLEN Team Members:**
-- Use the evaluation criteria and weight table in the challenge document for assessment
-- Networking and security together account for 45% of the evaluation
+- Use your internal evaluation rubric when assessing submissions
+- Place significant emphasis on networking and security when evaluating solutions
 
 ## General Guidelines
 
