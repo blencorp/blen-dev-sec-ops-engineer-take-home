@@ -1,47 +1,47 @@
 # BLEN Engineering Take-Home Challenge
 
-Welcome to the BLEN Engineering Take-Home Challenge repository. This challenge is designed to assess candidates' skills in cloud infrastructure, networking, security, containerization, and DevOps practices.
+Welcome to the BLEN Engineering Take-Home Challenge repository. This challenge is designed to assess candidates' skills in infrastructure-as-code, networking, security scanning, containerization, and CI/CD -- all at **zero cost** with no AWS account required.
 
 ## Challenge
 
-**DevSecOps Engineer: Secure Three-Tier Architecture on AWS**
-- [Challenge Instructions](aws-three-tier-architecture.md)
-- Focus: Networking design, infrastructure as code, containerization, database security, and CI/CD pipeline setup
+**DevSecOps Engineer: Secure Three-Tier Architecture on AWS (Zero-Cost Validation)**
+- [Challenge Instructions](challenge.md)
+- Focus: Terraform design, network security, IaC/container scanning, Docker Compose, and GitHub Actions CI/CD
+
+### Key Requirement: Zero AWS Cost
+
+Candidates write real Terraform for a full three-tier AWS architecture but validate everything **locally** with `terraform validate`, `tflint`, and `checkov`/`tfsec`. No `terraform apply` is ever run. Docker Compose proves the app works. GitHub Actions (free on public repos) handles CI/CD with security scanning. GHCR (free) replaces ECR for container image storage.
 
 ### What Candidates Will Build
 
-A production-style three-tier architecture on AWS:
-
-1. **Networking Foundation** - VPC with public, private, and isolated subnets, IGW, NAT Gateways, and proper route tables
-2. **Data Tier** - RDS PostgreSQL in isolated subnets with no public access
-3. **Application Tier** - ECS Fargate running a containerized Next.js app in private subnets
-4. **Presentation Tier** - Application Load Balancer in public subnets
-5. **CI/CD Pipeline** - GitHub Actions for automated build and deployment
-6. **Security** - IAM least privilege, security groups, Secrets Manager, network isolation
+1. **Terraform** - Full three-tier AWS architecture (VPC, subnets, RDS, ECS Fargate, ALB) validated locally with linters and security scanners
+2. **Docker Compose** - Local proof-of-life showing the Next.js app connected to PostgreSQL
+3. **GitHub Actions CI/CD** - PR and merge workflows with Terraform checks, Trivy container scanning, hadolint, gitleaks secret detection, and GHCR image publishing
+4. **Security Posture** - IaC scanning, container scanning, secret detection, and a security checklist
 
 ## Provided Resources
 
-The `app/` directory contains a pre-built Next.js application with:
-- A Dockerfile for containerization
-- Database connectivity check (displays connection status on the home page)
-- No application code modifications required - candidates focus purely on infrastructure
+The repository includes:
+
+- **`app/`** - A pre-built Next.js application with a Dockerfile and database connectivity check (no modifications required)
+- **`.github/workflows/pr.yml`** - Skeleton PR workflow with TODO placeholders for each CI job
+- **`.github/workflows/merge.yml`** - Skeleton merge workflow with TODO placeholders, including GHCR publishing
+- **`challenge.md`** - Complete challenge instructions with evaluation rubric
+
+> The Dockerfile is intentionally imperfect (runs as root, single-stage build). Candidates who run hadolint and Trivy will discover issues and can fix them for bonus points.
 
 ## How to Use This Repository
 
 **Candidates:**
-1. **Fork** this repository to your own GitHub account
-2. Read the [challenge instructions](aws-three-tier-architecture.md) thoroughly
-3. Implement your solution in your fork
-4. Update your fork's README with deployment instructions and architecture decisions
-5. Submit the link to your forked repository to your BLEN recruiting contact
-
-**BLEN Team Members:**
-- Use your internal evaluation rubric when assessing submissions
-- Place significant emphasis on networking and security when evaluating solutions
+1. Click **"Use this template"** to create your own copy (must be **public**). Do **not** fork.
+2. Read the [challenge instructions](challenge.md) thoroughly
+3. Implement your solution in your repo
+4. Update your README with architecture decisions, security considerations, and proof-of-life output
+5. Submit the link to your repository to your BLEN recruiting contact
 
 ## General Guidelines
 
-- All infrastructure must be provisioned with Terraform
+- All infrastructure must be defined with Terraform (validated locally, never applied)
 - Code quality, documentation, and the ability to explain your solution are important
 - Prioritize security and proper network segmentation
 - Time management is crucial; focus on core requirements before bonus features
