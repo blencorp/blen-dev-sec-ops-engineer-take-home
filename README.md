@@ -30,14 +30,18 @@ The repository includes:
 
 > The Dockerfile is intentionally imperfect (runs as root, single-stage build). Candidates who run hadolint and Trivy will discover issues and can fix them for bonus points.
 
-## How to Use This Repository
+## Getting Started
 
-**Candidates:**
-1. Click **"Use this template"** to create your own copy (must be **public**). Do **not** fork.
+**Time expectation:** Please submit within 24 hours. Focus on core requirements before bonus features.
+
+1. Click **"Use this template"** to create your own copy (must be **public** for free GitHub Actions). Do **not** fork.
 2. Read the [challenge instructions](challenge.md) thoroughly
 3. Implement your solution in your repo
 4. Update your README with architecture decisions, security considerations, and proof-of-life output
-5. Submit the link to your repository to your BLEN recruiting contact
+5. Add the following GitHub users as **collaborators** on your repo ([how to add collaborators](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository)):
+   - `naodya` (Naod — Engineering)
+   - `juliosbelen` (Julius — Engineering)
+6. Send the repo link to your BLEN recruiting contact
 
 ## General Guidelines
 
@@ -45,3 +49,7 @@ The repository includes:
 - Code quality, documentation, and the ability to explain your solution are important
 - Prioritize security and proper network segmentation
 - Time management is crucial; focus on core requirements before bonus features
+
+## Questions?
+
+If anything is unclear, reach out. We'd rather you ask than guess.
